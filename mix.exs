@@ -2,8 +2,8 @@ defmodule KafkaEx.Mixfile do
   @moduledoc false
   use Mix.Project
 
-  @source_url "https://github.com/kafkaex/kafka_ex"
-  @version "0.12.1"
+  @source_url "https://github.com/surgeventures/kafka_ex"
+  @version "0.1.0"
 
   def project do
     [
@@ -49,8 +49,7 @@ defmodule KafkaEx.Mixfile do
       {:credo, "~> 1.1", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0.0-rc.3", only: :dev, runtime: false},
       {:excoveralls, "~> 0.7", only: :test, runtime: false},
-      {:snappy,
-       git: "https://github.com/fdmanana/snappy-erlang-nif", only: [:dev, :test]},
+      {:snappy, git: "https://github.com/fdmanana/snappy-erlang-nif", only: [:dev, :test]},
       {:snappyer, "~> 1.2", only: [:dev, :test]}
     ]
 
@@ -68,12 +67,13 @@ defmodule KafkaEx.Mixfile do
   end
 
   defp package do
-    [
+    %{
       name: :kafka_ex_fresha,
       maintainers: ["Abejide Ayodele", "Dan Swain", "Jack Lund", "Joshua Scott"],
       files: ["lib", "config/config.exs", "mix.exs", "README.md"],
       licenses: ["MIT"],
-      links: %{"GitHub" => @source_url}
-    ]
+      links: %{"GitHub" => @source_url},
+      organization: "fresha"
+    }
   end
 end
