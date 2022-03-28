@@ -3,12 +3,11 @@ defmodule KafkaEx.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/surgeventures/kafka_ex"
-  @version "0.1.0"
 
   def project do
     [
       app: :kafka_ex,
-      version: @version,
+      version: "0.1.0",
       elixir: "~> 1.6",
       dialyzer: [
         plt_add_deps: :transitive,
