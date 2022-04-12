@@ -7,7 +7,7 @@ defmodule KafkaEx.Mixfile do
   def project do
     [
       app: :kafka_ex,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.6",
       dialyzer: [
         plt_add_deps: :transitive,
@@ -47,7 +47,7 @@ defmodule KafkaEx.Mixfile do
 
   defp deps do
     main_deps = [
-      {:kayrock, "~> 0.1.12"},
+      {:kayrock, "~> 0.1.15"},
       {:credo, "~> 1.1", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       {:excoveralls, "~> 0.7", only: :test, runtime: false},
